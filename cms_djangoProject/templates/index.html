@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static menu_tags cms_tags %}
+
+{% block content %}
+
+    {% placeholder content or %}
+        <p style="color: red">default text</p>
+    {% endplaceholder %}
+
+
+{% endblock %}

@@ -1,4 +1,5 @@
 import os  # isort:skip
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -18,7 +19,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -30,24 +30,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
-
-
-
 
 
 ROOT_URLCONF = 'cms_djangoProject.urls'
 
-
-
 WSGI_APPLICATION = 'cms_djangoProject.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-
 
 
 # Password validation
@@ -68,7 +59,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -81,7 +71,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
@@ -96,11 +85,10 @@ STATICFILES_DIRS = (
 )
 SITE_ID = 1
 
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'cms_djangoProject', 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'cms_djangoProject', 'templates'), ],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -122,7 +110,6 @@ TEMPLATES = [
         },
     },
 ]
-
 
 MIDDLEWARE = [
     'cms.middleware.utils.ApphookReloadMiddleware',
@@ -175,10 +162,15 @@ INSTALLED_APPS = [
     'djangocms_icon',
     'djangocms_link',
     'djangocms_picture',
-    'djangocms_style',
+    # 'djangocms_style',
     'djangocms_googlemap',
     'djangocms_video',
-    'cms_djangoProject'
+    'cms_djangoProject',
+
+    ## mine
+    # 'aldryn_style',
+    # 'aldryn_bootstrap4',
+
 ]
 
 LANGUAGES = (
@@ -206,9 +198,7 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
-    ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('index.html', 'Main'),
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
