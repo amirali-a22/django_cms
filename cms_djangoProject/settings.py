@@ -169,8 +169,12 @@ INSTALLED_APPS = [
 
     ## mine
     # 'aldryn_style',
-    # 'aldryn_bootstrap4',
+    # 'aldryn_bootstrap3',
+    # 'sorl.thumbnail',
+    # 'djangocms_slider',
 
+    ## third party
+    'djangocms_slick_slider.apps.DjangocmsSlickSliderConfig',
 ]
 
 LANGUAGES = (
